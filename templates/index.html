@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p>{% if request.user.is_authenticated %}
+    giriş yapılmış, {{request.user.username}}
+    {% else %}
+    giriş yapılmamış
+    {% endif %}</p>
+
+
+{% endblock body %}
+
+
+

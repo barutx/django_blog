@@ -1,0 +1,284 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frontend_test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap kodları kimi CSS kodlarının çalışmasına mani olabilir -->
+
+    <link rel="shortcut icon" href="https://icons8.com/icon/XAuXRpisoL2i/lizard"
+          type="image/x-icon" color="#000000">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+
+    <!-- external css -->
+    <!--    <link rel="stylesheet" href="{% static 'frontend.css' '%}">-->
+
+    <!-- internal css -->
+    <style>
+        .yeni-biseyler{
+        background:yellow
+        }
+        tr:nth-child(even){
+            background-color: blue !important
+            }
+
+         /* th {
+         background: lightblue !important
+         }
+         td {
+         background:pink  !important
+         } */
+
+        table, td, th {
+            border: 5px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .mycontainer{
+            width:100%;
+            overflow:auto;
+        }
+        .mycontainer div {
+            width:33%;
+            float:left;
+
+        }
+        .mycontainer h2,.mycontainer p{
+            padding-left:10px;
+            padding-right:10px;
+            color:purple
+        }
+        .city{
+            background: brown;
+            color: orange;
+            padding: 10px;
+        }
+
+        .country {
+            text-align:center;
+            border: groove;
+            border-collapse: collapse;
+         }
+         #benimBasligim {
+            color: yellow;
+            background: gray;
+            font-family: Brush Script MT;
+
+        }
+
+        .tac-one-regular {
+          font-family: "Tac One", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+
+<div>
+<!--<table class="table">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th scope="col">#</th>-->
+<!--        <th scope="col"> Firstname</th>-->
+<!--        <th scope="col">Lastname</th>-->
+<!--        <th scope="col">Username</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+
+<!--    <tbody>-->
+<!--    {% for user in users %}-->
+<!--    <tr>-->
+<!--        <th scope="row"> {{user.id}}</th>-->
+<!--        <td> {{user.first_name}}</td>-->
+<!--        <td> {{user.last_name}}</td>-->
+<!--        <td>{{ user.username}}</td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+<!--    </tbody>-->
+<!--</table>-->
+
+
+<h1 class="yeni-biseyler">Benim Birinci Başlığım</h1>
+
+<p style="background:gray">Bu benim paragrafım</p>
+
+<a href="https://www.coingecko.com/en/coins/dream-machine-token" style="color: #ff9f00;font-size: larger"
+   target="_blank"> CoinGecko</a>
+
+<a href="mailto:baran.acidere@gmail.com">Send mail </a>
+
+<button onclick="javascript:window.open('https://www.youtube.com/watch?v=dmbglpJndkY','blank')" formtarget="_blank">
+    Drum&Bass
+</button>
+
+<br> <!-- br etiketi satır atlamayı sağlıyor -->
+<hr> <!-- horizontal rule, çok ince bir gri çizgi -->
+<img src="{% static 'Unknown.jpeg' %}" alt="Ev resmi">
+
+<!--inline css -->
+<!--<tagname style="property:value;"-->
+
+<section>
+<!-- etiket denemeleri -->
+<!--<b> BARAN</b>-->
+<!--<br> &lt;!&ndash; br etiketi satır atlamayı sağlıyor &ndash;&gt;-->
+<!--<strong>ACIDERE</strong>-->
+<!--<i>MERHABA</i>-->
+<!--<em>BENİ VURGULA</em>-->
+<!--<mark> Marked text</mark>-->
+<!--<small>KÜÇÜK YAZI</small>-->
+<!--<del>ÜSTÜ ÇİZİLİ YAZI</del>-->
+<!--<ins>ALTI ÇİZİLİ YAZI</ins>-->
+<!--<sub>ALT TEXT</sub>-->
+<!--<sup> ÜST</sup>-->
+<!--<blockquote cite="https://www.tradingview.com/symbols/BTCUSDT/">-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, consectetur deleniti dolorum eaque earum eius id-->
+<!--    neque nostrum placeat quas repudiandae sapiente totam. Assumenda iure nam nihil nulla sapiente soluta.-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet at beatae corporis culpa eligendi eos expedita-->
+<!--    fugiat fugit impedit inventore itaque nesciunt, officiis omnis quasi quidem tenetur voluptates voluptatum?-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aspernatur culpa deserunt eius, enim-->
+<!--    inventore ipsa iusto laboriosam laborum minus, nam necessitatibus nesciunt placeat ratione reprehenderit sit-->
+<!--    temporibus vero!-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ipsam nesciunt repellendus. Commodi distinctio-->
+<!--    ducimus error molestias optio provident, suscipit ullam. Aliquid dolorum earum inventore magni, mollitia quasi qui-->
+<!--    ut.-->
+<!--</blockquote>-->
+
+
+<!--&lt;!&ndash; inline css &ndash;&gt;-->
+<!--<h1 style="background-color:DodgerBlue; color:white;border: 15px dotted palevioletred; border-radius: 15px; padding: 15px;text-align:center">-->
+<!--    DENEME DENEME</h1>-->
+<!--<p style="color:red; background:cyan; font-weight:bold"> SEÇİMİ KAZANDIK</p>-->
+<!--&lt;!&ndash;h1&ndash;&gt;-->
+<!--&lt;!&ndash;h2&ndash;&gt;-->
+<!--&lt;!&ndash;h3&ndash;&gt;-->
+<!--&lt;!&ndash;h4&ndash;&gt;-->
+<!--&lt;!&ndash;h5&ndash;&gt;-->
+<!--&lt;!&ndash;h6&ndash;&gt;-->
+<!--<table style="width:100%">-->
+<!--    <tr>  &lt;!&ndash; satır elementi&ndash;&gt;-->
+<!--        <th style="width:70%"> Company</th>   &lt;!&ndash; başlıklar &ndash;&gt;-->
+<!--        <th colspan="2"> Contact and Country</th>-->
+<!--        &lt;!&ndash;<th> Country</th>  sütunları birleştirmek için commente aldık &ndash;&gt;-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td> Mercedes</td> &lt;!&ndash; rowspan="2" satır birleştirmeye yarıyor. &ndash;&gt;-->
+<!--        <td> Hans Meier</td>-->
+<!--        <td>Germany</td>-->
+<!--    </tr>-->
+
+<!--    <tr style="height:200px">-->
+<!--        <td> Skoda</td>-->
+<!--        <td> Olga Naie</td>-->
+<!--        <td> Czech Republic</td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!--<ul>-->
+<!--    <li> Hülya</li>-->
+<!--    <li> Mehmet</li>-->
+<!--    <li>Baran</li>-->
+<!--    <li>Selçuk</li>-->
+<!--</ul>-->
+
+
+<!--&lt;!&ndash; ordered list &ndash;&gt;-->
+<!--<ol>-->
+<!--    <li> Mehmet</li>-->
+<!--    <li>Baran</li>-->
+<!--    <li>Selçuk</li>-->
+<!--</ol>-->
+
+<!--<dl>-->
+<!--    <dt>Mantı</dt>-->
+<!--    <dd> - Mantı Kayseri'nin meşhur yemeğidir, hamur ve kıyma ile yapılır.</dd>-->
+<!--    <dt> Makarna</dt>-->
+<!--    <dd> - Sarımsaklı yoğurtlu makarna çok iyidir.</dd>-->
+<!--</dl>-->
+<!--<ul style="list-style-type:circle">  &lt;!&ndash; circle square ya da disc kullanabiliriz.&ndash;&gt;-->
+<!--    <li> Mehmet</li>-->
+<!--    <li>Baran</li>-->
+<!--    <li>Selçuk</li>-->
+<!--</ul>-->
+
+<!--<ol type="a">-->
+<!--    &lt;!&ndash; I, A, 5 vs. verebiliriz.bu sıralama tipini değiştircektir. Sayı verdiğimizde o sayıdan sıralamaya başlayacak.&ndash;&gt;-->
+<!--    <li> Mehmet</li>-->
+<!--    <li>Baran</li>-->
+<!--    <li>Selçuk</li>-->
+<!--</ol>-->
+
+<!--<div  style="background:lightyellow; width:300px; margin:auto" >-->
+<!--    <h2>Londra</h2>-->
+<!--    <p>Londra, İngiltere'nin başkentidir.</p>-->
+<!--    <p>Londra'da 13 milyon insan yaşar.</p>-->
+<!--</div>-->
+
+<!--<div class="mycontainer">  &lt;!&ndash;bu classı yukarıdaki style etiketi içerisinde tanımlıyoruz.(internal css) &ndash;&gt;-->
+<!--    <div style="background:lightyellow">-->
+<!--        <h2>Londra</h2>-->
+<!--        <p>Londra, İngiltere'nin başkentidir.</p>-->
+<!--        <p>Londra'da 13 milyon insan yaşar.</p>-->
+<!--    </div>-->
+<!--    <div style="background:lightblue">-->
+<!--        <h2>İstanbul</h2>-->
+<!--        <p>İstanbul Türkiye'nin en büyük şehridir.</p>-->
+<!--        <p>İstanbul'da 18 milyon insan yaşar.</p>-->
+<!--    </div>-->
+<!--    <div style="background:lightgray">-->
+<!--        <h2>İzmir</h2>-->
+<!--        <p>İzmir Türkiye'nin bir şehridir.</p>-->
+<!--        <p>İzmir'de 5 milyon insan yaşar.</p>-->
+<!--    </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;  ul>li.item$*5    taba basarsak emmetin nasıl tamamladığını görebiliriz.&ndash;&gt;-->
+
+<!--<h2 class="city country">Karaman</h2>-->
+<!--<p>Karaman, İç Anadolu bölgesindedir.</p>-->
+<!--<h2 class="city">Artvin</h2>-->
+<!--<p> Artvin, Karadeniz bölgesindedir</p>-->
+</section>
+
+<h1 id="benimBasligim"> Başlık Deneme</h1>
+<h1 class="tac-one-regular"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae dolor dolore minus nemo, nesciunt odio pariatur perferendis praesentium quibusdam quos sequi similique temporibus! Blanditiis culpa doloremque fuga illo unde.</h1>
+<!--yukarıdaki kodu google-fonttan alıp headera ekledik.-->
+<i class="fa-solid fa-hippo"></i>
+    </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

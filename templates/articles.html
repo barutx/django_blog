@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<div class="row">
+    <div class="col-lg-8 offset-2" style="text-align:center">
+          <h3 style="margin:10px auto">Makaleler</h3>
+            <hr>
+        <form action="" method="GET">
+            {% csrf_token %}
+            <input type="text" name="keyword" class="input-sm">
+            <button type="submit" class="btn btn-danger">Ara </button>
+            <hr>
+        </form>
+    </div>
+</div>
+
+
+
+{% if articles %}
+{% for article in articles %}
+<div class="row">
+                <div class="col-lg-8 offset-2">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <a href="{% url 'article:detail' article.id %}">
+                            <h1 class="fw-bolder mb-1">{{ article.title }}</h1></a>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on {{article.created_date}}</div>
+                            <!-- Post categories-->
+
+                        </header>
+                        <!-- Preview image figure-->
+                        {% if article.article_image %}
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{ article.article_image.url }}" alt="..."></figure>
+                        {% endif %}
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <div>
+                                {{ article.content|safe|truncatewords:30 }}
+                                <a href="{% url 'article:detail' article.id %}">
+                                    read more
+                            </a>
+                            </div>
+                        </section>
+                    </article>
+
+                </div>
+            </div>
+<hr>
+{% endfor %}
+
+{% else %}
+<div class="row">
+    <div class="col-lg-8 offset-2">
+<div class="alert alert-danger" role="alert">
+    Makale bulunamadı!
+</div>
+</div>
+    </div>
+
+{% endif %}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+{% endblock body %}

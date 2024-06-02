@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+.button{
+    cursor:pointer;
+    min-height:2em;
+    border-radius:2px;
+    box-shadow:1px;
+    }
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form style="padding-top:20px;" method="post">
+            <h3>Giriş Yap</h3>
+            <hr>
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <br>
+            <button type="submit" class="btn btn-success">Giriş Yap</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}
